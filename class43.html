@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Strings</h1>
+    <h2>The slice() Method</h2>
+
+    <p>The sliced (extracted) part of the string is:</p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <!-- substring() is similar to slice().
+The difference is that start and end values less than 0 are treated as 0 in substring(). -->
+    <script>
+      let institute = "Adaovi, Google, ABC";
+      let Name = "Mohammed,Fayaz, Jahid";
+      let Nameagain = "Adaovi, Google, ABC";
+      let part = institute.slice(2, -13);
+      let part2 = Name.slice(7);
+      let part3 = Nameagain.substring(2, -13);
+      document.getElementById("demo").innerHTML = part;
+      document.getElementById("demo2").innerHTML = part2;
+      document.getElementById("demo3").innerHTML = part3;
+    </script>
+  </body>
+</html>

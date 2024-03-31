@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The JavaScript <i>this</i> Keyword</h1>
+    <p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+    <p>Because <b>fullName</b> is a method of the person object.</p>
+
+    <p id="demo"></p>
+    <p id="demotrail"></p>
+    <h1 id="demotrail1"></h1>
+    <h2 id="demotrail2"></h2>
+    <h2 id="demotrail3"></h2>
+
+    <script>
+      // Create an object:
+      const person = {
+        firstName: "Mohammed",
+        lastName: "Jahid",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName + " " + this.id;
+        },
+      };
+
+      const Student = {
+        firstName: "Mohammed",
+        lastName: "Jahid",
+        id: 1242465,
+      };
+
+      // Display data from the object:
+
+      let txt = "";
+      for (let x in Student) {
+        txt += Student[x] + " ";
+      }
+
+      const persondetails = Object.values(person);
+
+      document.getElementById("demo").innerHTML = person.fullName();
+      document.getElementById("demotrail").innerHTML = Student;
+      document.getElementById("demotrail1").innerHTML = person.lastName;
+      document.getElementById("demotrail2").innerHTML = persondetails;
+      document.getElementById("demotrail3").innerHTML = txt;
+    </script>
+  </body>
+</html>

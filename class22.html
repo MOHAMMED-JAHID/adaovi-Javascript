@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="demo"></h1>
+
+    <script>
+      function renderApp() {
+        document.getElementById("demo").innerHTML = "Welcome!";
+      }
+
+      function renderLogin() {
+        document.getElementById("demo").innerHTML = "Please log in";
+      }
+
+      let UserName = "Mohammed";
+      let Password = "12345";
+
+      if (UserName == "Mohammed" && Password == "Jahid") {
+        renderApp();
+      } else {
+        renderLogin();
+      }
+    </script>
+
+    <p>
+      Try changing the "UserName and Password" variable to othervalue,and run
+      the code to see what happens.
+    </p>
+  </body>
+</html>

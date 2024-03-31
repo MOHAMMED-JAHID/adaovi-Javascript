@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Arrays</h2>
+
+    <p id="demo"></p>
+    <h3 id="demo3"></h3>
+    <h1 id="demotrail" style="color: palevioletred"></h1>
+
+    <script>
+      const Names = ["Sam", "Lilu", "Albert", "Robert", "Alex"];
+      // Names[3] = "kevin";
+      document.getElementById("demo").innerHTML = Names;
+      // document.getElementById("demo3").innerHTML = Names.length;
+      document.getElementById("demo3").innerHTML = Names.sort();
+      const Courses = [];
+      Courses[0] = "Html";
+      Courses[1] = "React";
+      Courses[2] = "Javascript";
+
+      document.getElementById("demotrail").innerHTML = Courses + Courses[2];
+      // document.getElementById("demotrail").innerHTML = Courses[2];
+    </script>
+  </body>
+</html>

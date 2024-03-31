@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .imgbox {
+        float: left;
+        text-align: center;
+        width: 120px;
+        border: 1px solid gray;
+        margin: 4px;
+        padding: 6px;
+      }
+
+      button {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body style="background-color: seagreen">
+    <h3>Difference between display:none and visiblity: hidden</h3>
+    <p>
+      <strong>visibility:hidden</strong> hides the element, but it still takes
+      up space in the layout.
+    </p>
+    <p>
+      <strong>display:none</strong> removes the element from the document. It
+      does not take up any space.
+    </p>
+
+    <div class="imgbox" id="imgbox1">
+      Box 1<br />
+      <img
+        src="https://th.bing.com/th/id/R.010edbcb0206d4bc24ddcccd1fc307cd?rik=vyYRWmr9OvrOsA&riu=http%3a%2f%2fallpicts.in%2fwp-content%2fuploads%2f2015%2f07%2fBeautiful-Nature-Wallpaper-with-Two-Lotus-Flowers-in-Pink.jpg&ehk=fAzo4nd97vUOJugZ9Y5IT5Ia5JhQC9fK0yQxLVJS1iA%3d&risl=&pid=ImgRaw&r=0"
+        alt="Italy"
+        style="width: 100%"
+      />
+      <button onclick="removeElement()">Remove</button>
+    </div>
+
+    <div class="imgbox" id="imgbox2">
+      Box 2<br />
+      <img
+        src="https://live.staticflickr.com/6085/6053093820_32eda6306f.jpg"
+        alt="Lights"
+        style="width: 100%"
+      />
+      <button onclick="changeVisibility()">Hide</button>
+    </div>
+
+    <div class="imgbox">
+      Box 3<br />
+      <img
+        src="https://th.bing.com/th/id/OIP.ocr7_YieDrOuwQScONvs1wHaF9?pid=ImgDet&rs=1"
+        alt="Forest"
+        style="width: 100%"
+      />
+      <button onclick="resetElement()">Reset All</button>
+    </div>
+
+    <script>
+      function removeElement() {
+        document.getElementById("imgbox1").style.display = "none";
+      }
+
+      function changeVisibility() {
+        document.getElementById("imgbox2").style.visibility = "hidden";
+      }
+
+      function resetElement() {
+        document.getElementById("imgbox1").style.display = "block";
+        document.getElementById("imgbox2").style.visibility = "visible";
+      }
+    </script>
+  </body>
+</html>

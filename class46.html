@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Dates</h1>
+    <h2>Using new Date()</h2>
+    <p>
+      new Date() without arguments, creates a date object with the current date
+      and time:
+    </p>
+    <p id="demo"></p>
+    <p id="demotrail"></p>
+    <p id="demotrailnew"></p>
+    <script>
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d;
+
+      // const datenew = new Date("2000-07-02")
+      // document.getElementById("demotrail").innerHTML = datenew;
+
+      // //const datenew = new Date(year,month,day,hours,minutes)
+      const datenew = new Date("2023", "05", "01", "06", "05");
+      document.getElementById("demotrail").innerHTML = datenew;
+
+      const datewithanother = new Date("May 02, 1992 11:13:20");
+      document.getElementById("demotrailnew").innerHTML = datewithanother;
+    </script>
+  </body>
+</html>

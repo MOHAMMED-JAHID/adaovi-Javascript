@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Array.filter()</h2>
+    <p>Creates a new array with all array elements that passes a test.</p>
+    <p id="demo"></p>
+    <h1 id="demo1"></h1>
+    <h2 id="demo2"></h2>
+    <h3 id="demo3"></h3>
+    <h4 id="demo4"></h4>
+    <script>
+      const numbers = [45, 4, 9, 16, 25, 8, 1, 5, 2];
+      const evennumber = numbers.filter(myFunction);
+      document.getElementById("demo").innerHTML = evennumber;
+      function myFunction(value) {
+        return value % 2 == 0;
+      }
+      const myArr = [1, 2, 3, 4, 5, 6];
+      const newArr = myArr.flatMap((x) => x * 2);
+      document.getElementById("demo1").innerHTML = newArr;
+
+      const numberstrail = [45, 4, 9, 16, 25];
+      let sum = numberstrail.reduce(myFunctionreduce, 100);
+      document.getElementById("demo2").innerHTML = "The sum is " + sum;
+      function myFunctionreduce(total, value) {
+        return total + value;
+      }
+
+      const numbersfind = [4, 9, 16, 25, 29];
+      let first = numbersfind.find(myFunctionfind);
+      document.getElementById("demo3").innerHTML =
+        "First number over 18 is " + first;
+      function myFunctionfind(value, index, array) {
+        return value > 18;
+      }
+
+      const myArrfrom = Array.from("MohammedRANJANBISWAL");
+      document.getElementById("demo4").innerHTML = myArrfrom;
+    </script>
+  </body>
+</html>

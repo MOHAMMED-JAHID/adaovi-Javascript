@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Example with Function...</h2>
+    <p id="demo"></p>
+    <p id="demotrail"></p>
+    <script>
+      var FirstName = "Mohammed";
+      let LastName = "Jahid";
+      const Course = "React";
+
+      let fullresult = FirstName + LastName + Course;
+      //console.log(fullresult);
+
+      function fullnamedetails() {
+        document.write(
+          "My Name is :" +
+            FirstName +
+            LastName +
+            " " +
+            "And Course is:" +
+            " " +
+            Course
+        );
+      }
+
+      function fullnames() {
+        debugger;
+        // Create an Array:
+        const Names = ["Mohammed", "Ram", "Jahid"];
+
+        // Change an element:
+
+        Names[1] = "rahman";
+        Names.push("React");
+        // Add an element:
+        document.write(Names);
+      }
+    </script>
+    <button
+      onclick="document.getElementById('demo').innerHTML=fullnamedetails()"
+    >
+      Name
+    </button>
+
+    <button
+      onclick="document.getElementById('demotrail').innerHTML=fullnames()"
+    >
+      Nms
+    </button>
+  </body>
+</html>

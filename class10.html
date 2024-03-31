@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <label for="FirstNumber">First Number:</label><br>
+  <input type="number" id="num1" placeholder="1. FirstNumber"><br>
+  <label for="SecondNumber">Second Number:</label><br>
+  <input type="number" id="num2" placeholder="2. SecondNumber"><br>
+  <div>
+    <ol>
+      <button onclick="calculate(this)" value="+">[ + ] Addition</button>
+      <button onclick="calculate(this)" value="-">[ - ] Subtraction</button>
+      <button onclick="calculate(this)" value="*">[ * ] Multiply</button>
+      <button onclick="calculate(this)" value="/">[ / ] Devide</button>
+    </ol>
+  </div>
+
+  <input type="number" id="Result" placeholder="Result">
+
+  <script>
+    function calculate(button) {
+      var num1 = +document.getElementById("num1").value;
+      var num2 = +document.getElementById("num2").value;
+
+      var operator = button.getAttribute('value');
+      switch (operator) {
+        case "+":
+        document.getElementById("Result").value = num1 + num2;
+        break;
+        case "-":
+        document.getElementById("Result").value = num1 - num2;
+        break;
+        case "*":
+        document.getElementById("Result").value = num1 * num2;
+        break;
+        case "/":
+        document.getElementById("Result").value = num1 / num2;
+        break;
+      }
+
+    }
+  </script>
+
+</body>
+</html>
+ for="SecondNumber">Second Number:</label><br>

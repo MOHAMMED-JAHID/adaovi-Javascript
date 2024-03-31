@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <h2>Callback Functions</h2>
+
+    <p>The fullname is:</p>
+    <p id="demo"></p>
+
+    <script>
+      function Display(Result) {
+        document.getElementById("demo").innerHTML = Result;
+      }
+
+      function myfullnamefunction(name1, name2, myCallback) {
+        let fullname = name1 + name2;
+        myCallback(fullname);
+      }
+
+      myfullnamefunction("Mohammed", "Jahid", Display);
+    </script>
+  </body>
+</html>

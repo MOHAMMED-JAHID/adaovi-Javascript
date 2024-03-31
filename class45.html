@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Dates</h1>
+<h2>Using new Date()</h2>
+<p>new Date() without arguments, creates a date object with the current date and time:</p>
+<p id="demo"></p>
+<p id="demotrail"></p>
+<p id="demotrailnew"></p>
+<h1 id="dateid"></h1>
+<h2 id="datehours"></h2>
+<h3 id="datemin"></h3>
+<h3 id="dateset"><h3>
+<script>
+const fullyerdate = new Date()
+document.getElementById("demo").innerHTML = fullyerdate.getFullYear();
+
+const fullgetmonth = new Date("2021-03-25");
+document.getElementById("demotrail").innerHTML = fullgetmonth.getMonth();
+
+const months = ["January","February","March","April","May","June",
+"July","August","September","October","November","December"];
+
+const d = new Date("2021-03-25");
+let month = months[d.getMonth() + 1];
+document.getElementById("demotrailnew").innerHTML = month;
+
+const dateformatnew = new Date();
+document.getElementById("dateid").innerHTML = dateformatnew.getDate();
+
+const datehours = new Date();
+document.getElementById("datehours").innerHTML = datehours.getHours();
+
+const dateminutes = new Date();
+document.getElementById("datemin").innerHTML = dateminutes.getMinutes();
+
+const dset = new Date();
+dset.setMonth(May);
+document.getElementById("dateset").innerHTML = dset;
+</script>
+</body>
+</html>

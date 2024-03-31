@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Array Methods</h2>
+    <h2>toString()</h2>
+    <p>The toString() method returns an array as a comma separated string:</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <h1 id="trail"></h1>
+    <script>
+      const courses = ["html", "css", "js", "react", "dotnet"];
+      courses.push("java"); //append for new element
+      console.log(courses);
+      courses.pop("java"); // removing new element
+      document.getElementById("demo").innerHTML = courses.toString();
+      document.getElementById("demo1").innerHTML = courses.join("/");
+    </script>
+  </body>
+</html>

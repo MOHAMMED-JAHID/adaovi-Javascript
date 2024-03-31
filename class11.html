@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    Enter your Firstname: <input type="text" id="fname" /> Enter your Lastname:
+    <input type="text" id="Lname" />
+    <input type="text" id="keyid" onkeypress="mykeyFunction()" />
+    <h1 id="demo">Mouse over Here for ADaovi Technologies...</h1>
+    <script>
+      document.getElementById("fname").onchange = function () {
+        myFunction();
+      };
+      document.getElementById("Lname").onchange = function () {
+        myNameFunction();
+      };
+
+      function myFunction() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+      }
+
+      function myNameFunction() {
+        var x = document.getElementById("Lname");
+        x.value = x.value.toLowerCase();
+      }
+
+      function mouseOver() {
+        document.getElementById("demo").style.color = "red";
+      }
+
+      function mouseOut() {
+        document.getElementById("demo").style.color = "blue";
+      }
+
+      function mykeyFunction() {
+        alert("You Enter a Key .....");
+      }
+
+      // It is not fired for all keys (like ALT, CTRL, SHIFT, ESC) in all browsers.
+
+      // To detect if the user presses a key, always use the onkeydown event. It works for all keys.
+
+      document.getElementById("demo").onmouseover = function () {
+        mouseOver();
+      };
+      document.getElementById("demo").onmouseout = function () {
+        mouseOut();
+      };
+    </script>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+  </body>
+</html>
